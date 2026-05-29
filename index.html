@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mahesa Permana — Web3 Prompt Engineer & System Architect based in Indonesia. Specializing in LLMs, IoT, computer vision pipelines, and decentralized systems." />
+  <meta name="keywords"
+    content="Mahesa Permana, Hessong888, Web3, Prompt Engineer, System Architect, LLM, IoT, ESP32, YOLO, Computer Vision, Portfolio" />
+  <meta name="author" content="Mahesa Permana" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Mahesa Permana — Cyber-Botanical Portfolio" />
+  <meta property="og:description" content="Web3 Prompt Engineer & System Architect. Blending LLMs, hardware, and computer vision into elegant systems." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:image"       content="./assets/hero_bg.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Mahesa Permana — Portfolio" />
+  <meta name="twitter:description" content="Web3 Prompt Engineer & System Architect from Indonesia." />
+
+  <title>Mahesa Permana — Cyber-Botanical Portfolio</title>
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+
+  <!-- Favicon (SVG rose) -->
+  <link rel="icon" type="image/svg+xml" href="./assets/rose.svg" />
+</head>
+
+<body>
+
+  <!-- ── LOADING SCREEN ─────────────────────────────────── -->
+  <div id="loader" class="loader">
+    <img src="./assets/rose.svg" alt="Loading" class="loader-rose" />
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <span class="loader-text">Initializing System...</span>
+  </div>
+
+  <!-- ── CUSTOM CURSOR ──────────────────────────────────── -->
+  <div class="cursor" id="cursor-dot-wrap">
+    <div id="cursor-dot"  class="cursor-dot"></div>
+  </div>
+  <div class="cursor" id="cursor-ring-wrap">
+    <div id="cursor-ring" class="cursor-ring"></div>
+  </div>
+
+  <!-- ── MOBILE NAV ─────────────────────────────────────── -->
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close menu">✕</button>
+    <a href="#about">About</a>
+    <a href="#github">Repositories</a>
+    <a href="#experience">Experience</a>
+    <a href="#playground">Playground</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/Hessong888" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="https://www.linkedin.com/in/mahesa-permana/" target="_blank" rel="noopener">LinkedIn ↗</a>
+  </nav>
+
+  <!-- ── NAVIGATION ─────────────────────────────────────── -->
+  <header class="nav" role="banner">
+    <a href="#" class="nav-logo" aria-label="Home">
+      <img src="./assets/rose.svg" alt="Rose logo" />
+      Mahesa<span style="color:var(--gold)">.</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#github">Repositories</a>
+      <a href="#experience">Experience</a>
+      <a href="#playground">Playground</a>
+      <a href="#contact" class="nav-cta">Contact Me</a>
+    </nav>
+
+    <button id="nav-hamburger" class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════ -->
+    <!--  HERO                                             -->
+    <!-- ══════════════════════════════════════════════════ -->
+    <section class="hero" id="home" aria-label="Hero section">
+      <div class="hero-bg" role="presentation"></div>
+      <div id="hero-particles" class="hero-particles" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <!-- Text -->
+        <div class="hero-text">
+          <div class="hero-badge">
+            <div class="hero-badge-dot"></div>
+            Available for Collaboration
+          </div>
+
+          <h1 class="hero-name">
+            <span class="hero-name-main">Mahesa</span>
+            <span class="hero-name-glow">Permana</span>
+          </h1>
+
+          <p class="hero-title typing-cursor">
+            <span id="hero-typing">Web3 Prompt Engineer</span>
+          </p>
+
+          <p class="hero-description">
+            Blending the precision of <span style="color:var(--gold-soft)">machine intelligence</span>
+            with the depth of <span style="color:var(--purple-glow)">decentralized systems</span>.
+            I build at the intersection of LLMs, IoT hardware, and computer vision —
+            where code meets consciousness.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#github" class="btn-primary" id="hero-view-work">
+              View My Work
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn-secondary" id="hero-connect">
+              Let's Connect
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.1 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.45-.45a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number" id="stat-exp" data-count="4" data-suffix="+">0+</div>
+              <div class="stat-label">Years Active</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" id="stat-companies" data-count="3" data-suffix="">0</div>
+              <div class="stat-label">Companies</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" id="stat-domains" data-count="5" data-suffix="+">0+</div>
+              <div class="stat-label">Tech Domains</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-rose-wrap">
+            <div class="hero-rose-ring hero-rose-ring-1"></div>
+            <div class="hero-rose-ring hero-rose-ring-2"></div>
+            <div class="hero-rose-ring hero-rose-ring-3"></div>
+            <div class="hero-rose-glow"></div>
+            <img src="./assets/rose.svg" alt="Mechanical Rose" class="hero-rose-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll" aria-hidden="true">
+        <span class="scroll-text">Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ══════════════════════════════════════════════════ -->
+    <!--  ABOUT                                            -->
+    <!-- ══════════════════════════════════════════════════ -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Left: Text -->
+          <div class="reveal">
+            <p class="section-label">Who I Am</p>
+            <h2 id="about-title" class="section-title">The Architect<br />Behind the Code</h2>
+            <div class="about-text">
+              <p>
+                I'm <span>Mahesa Permana</span> — a <span>Web3 Prompt Engineer & System Architect</span>
+                based in Indonesia. I operate at the bleeding edge where Large Language Models meet
+                real-world hardware and distributed systems.
+              </p>
+              <p>
+                My craft involves <span>precision prompting</span> that accelerates complex software
+                development — from low-level C++ firmware for ESP32/IoT devices to
+                <span>computer vision pipelines</span> powered by YOLO, and full-stack
+                <span>automation logic</span> for industrial applications.
+              </p>
+              <p>
+                I've shipped production systems across automotive, manufacturing, and
+                tech industries — and I write compelling copy in both <span>English and Bahasa Indonesia</span>.
+                Precision. Fluency. Execution.
+              </p>
+            </div>
+
+            <div class="about-skills">
+              <p class="skill-label">Core Stack</p>
+              <div class="skill-chips">
+                <span class="skill-chip">Prompt Engineering</span>
+                <span class="skill-chip">C++ / ESP32</span>
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">YOLO / CV</span>
+                <span class="skill-chip">Docker</span>
+                <span class="skill-chip">Web3</span>
+                <span class="skill-chip">IoT Systems</span>
+                <span class="skill-chip">LLM Integration</span>
+                <span class="skill-chip">Database Design</span>
+                <span class="skill-chip">System Architecture</span>
+                <span class="skill-chip">Copywriting (EN/ID)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Identity Card -->
+          <div class="reveal reveal-delay-2">
+            <div class="about-card border-animated">
+              <div class="about-card-avatar">MP</div>
+              <div class="about-card-name">Mahesa Permana</div>
+              <div class="about-card-title">// Web3 Prompt Engineer & System Architect</div>
+
+              <div class="about-card-info">
+                <div class="about-info-item">
+                  <svg class="about-info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                       fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Indonesia
+                </div>
+                <div class="about-info-item">
+                  <svg class="about-info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                       fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                  </svg>
+                  <a href="https://github.com/Hessong888" target="_blank" rel="noopener"
+                     style="color:var(--purple-glow)">github.com/Hessong888</a>
+                </div>
+                <div class="about-info-item">
+                  <svg class="about-info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                       fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                  </svg>
+                  <a href="https://www.linkedin.com/in/mahesa-permana/" target="_blank" rel="noopener"
+                     style="color:var(--purple-glow)">linkedin.com/in/mahesa-permana</a>
+                </div>
+                <div class="about-info-item">
+                  <svg class="about-info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                       fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                  </svg>
+                  Open to Remote & On-site
+                </div>
+              </div>
+
+              <div class="about-card-divider"></div>
+
+              <div class="about-social-links">
+                <!-- GitHub -->
+                <a href="https://github.com/Hessong888" target="_blank" rel="noopener"
+                   class="social-link" aria-label="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                  </svg>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/mahesa-permana/" target="_blank" rel="noopener"
+                   class="social-link" aria-label="LinkedIn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </a>
+                <!-- Vercel -->
+                <a href="https://vercel.com/865tirthas-projects" target="_blank" rel="noopener"
+                   class="social-link" aria-label="Vercel Projects">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 22.525H0l12-21.05 12 21.05z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ══════════════════════════════════════════════════ -->
+    <!--  GITHUB REPOSITORIES                              -->
+    <!-- ══════════════════════════════════════════════════ -->
+    <section class="section github" id="github" aria-labelledby="github-title">
+      <div class="container">
+        <p class="section-label reveal">Code Repository</p>
+        <h2 id="github-title" class="section-title reveal reveal-delay-1">Open Source<br />& Projects</h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Live-synced from GitHub. Each repository is a building block of a larger vision —
+          systems that think, sense, and act.
+        </p>
+
+        <!-- Profile Banner -->
+        <div class="github-profile-banner reveal">
+          <div class="github-avatar" id="github-avatar"></div>
+          <div class="github-profile-info">
+            <div class="github-profile-name" id="github-name">Mahesa Permana</div>
+            <div class="github-profile-handle" id="github-handle">@Hessong888</div>
+            <div class="github-profile-bio" id="github-bio">
+              Web3 Prompt Engineer & System Architect · Indonesia
+            </div>
+            <div style="display:flex; gap:24px; margin-top:12px;">
+              <span style="font-family:var(--font-mono);font-size:0.78rem;color:var(--gray-400);">
+                <span id="github-followers" style="color:var(--gold);font-weight:700">—</span>
+                <span style="margin-left:4px;">followers</span>
+              </span>
+              <span style="font-family:var(--font-mono);font-size:0.78rem;color:var(--gray-400);">
+                <span id="github-following" style="color:var(--gold);font-weight:700">—</span>
+                <span style="margin-left:4px;">following</span>
+              </span>
+              <span style="font-family:var(--font-mono);font-size:0.78rem;color:var(--gray-400);">
+                <span id="github-public-repos" style="color:var(--gold);font-weight:700">—</span>
+                <span style="margin-left:4px;">public repos</span>
+              </span>
+            </div>
+          </div>
+          <a href="https://github.com/Hessong888" target="_blank" rel="noopener"
+             class="github-profile-link" id="github-profile-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+            </svg>
+            View on GitHub
+          </a>
+        </div>
+
+        <!-- Repos Grid (populated by JS) -->
+        <div class="repo-grid stagger" id="repo-grid">
+          <!-- Shimmer placeholders while loading -->
+          <div class="repo-card shimmer" style="height:180px;"></div>
+          <div class="repo-card shimmer" style="height:180px;"></div>
+          <div class="repo-card shimmer" style="height:180px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ══════════════════════════════════════════════════ -->
+    <!--  EXPERIENCE TIMELINE                              -->
+    <!-- ══════════════════════════════════════════════════ -->
+    <section class="section experience" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <p class="section-label reveal">Professional Proof-of-Work</p>
+        <h2 id="experience-title" class="section-title reveal reveal-delay-1">Career<br />Timeline</h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          A verified ledger of professional contributions — each block validated by real-world
+          production impact.
+        </p>
+
+        <div class="timeline stagger">
+
+          <!-- Experience 1: Abacus Kencana QC -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role">Quality Control (QC)</div>
+                <span class="timeline-period">2022 — 2023</span>
+              </div>
+              <div class="timeline-company">PT. Abacus Kencana Industries</div>
+              <p class="timeline-desc">
+                Conducted quality inspection and process validation for industrial manufacturing
+                operations. Applied systematic inspection protocols, documented non-conformances,
+                and collaborated cross-functionally to drive corrective actions and improve
+                overall production quality standards.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Quality Control</span>
+                <span class="timeline-tag">Inspection</span>
+                <span class="timeline-tag">Process Improvement</span>
+                <span class="timeline-tag">Manufacturing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2: SGMW Purchasing -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role">Purchasing</div>
+                <span class="timeline-period">2022</span>
+              </div>
+              <div class="timeline-company">PT. SGMW Motor Indonesia</div>
+              <p class="timeline-desc">
+                Managed procurement and purchasing operations within an automotive manufacturing
+                environment. Coordinated with suppliers, tracked purchase orders, maintained
+                inventory accuracy, and ensured timely delivery of components to support
+                production line continuity.
+              </div>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Purchasing</span>
+                <span class="timeline-tag">Procurement</span>
+                <span class="timeline-tag">Inventory</span>
+                <span class="timeline-tag">Supply Chain</span>
+                <span class="timeline-tag">Automotive</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 4: IT Support -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role">IT Support</div>
+                <span class="timeline-period">2021 — 2022</span>
+              </div>
+              <div class="timeline-company">PT. Trimitra Chitrahasta</div>
+              <p class="timeline-desc">
+                Provided technical infrastructure support, networking maintenance, and hardware troubleshooting to ensure operational continuity.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">IT Infrastructure</span>
+                <span class="timeline-tag">Networking</span>
+                <span class="timeline-tag">Technical Support</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Education -->
+        <div style="margin-top: 72px;">
+          <p class="section-label reveal">Education</p>
+          <div class="education-grid stagger">
+
+            <!-- Politeknik Industri ATMI Cikarang -->
+            <div class="education-card">
+              <div class="education-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <div class="education-degree">D4 — Teknologi Rekayasa Mekatronika</div>
+              <div class="education-school">Politeknik Industri ATMI Cikarang</div>
+              <div class="education-year">Applied Mechatronic Engineering · Cikarang, Indonesia</div>
+            </div>
+
+            <!-- SMK Ananda Mitra Industri Deltamas -->
+            <div class="education-card">
+              <div class="education-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M12 20h9"/>
+                  <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                </svg>
+              </div>
+              <div class="education-degree">Elektronika Industri</div>
+              <div class="education-school">SMK Ananda Mitra Industri Deltamas</div>
+              <div class="education-year">Industrial Electronics · Deltamas, Cikarang</div>
+            </div>
+
+          </div>
+        </div>          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ══════════════════════════════════════════════════ -->
+    <!--  INTERACTIVE PLAYGROUND (VERCEL PROJECTS)         -->
+    <!-- ══════════════════════════════════════════════════ -->
+    <section class="section playground" id="playground" aria-labelledby="playground-title">
+      <div class="container">
+        <p class="section-label reveal">Interactive Playground</p>
+        <h2 id="playground-title" class="section-title reveal reveal-delay-1">Live Projects<br />&amp; Games</h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Deployed experiments and interactive experiences. Click any card to launch the live app
+          directly from Vercel.
+        </p>
+
+        <div class="playground-carousel-wrap reveal">
+          <div class="playground-carousel" id="playground-carousel">
+
+            <!-- Card 1: Nusantara Culinary Alchemist (REAL) -->
+            <div class="playground-card">
+              <div class="playground-preview" style="background: linear-gradient(135deg, #2d1a0a, #4a2a10);">
+                <div class="playground-preview-glow" style="background: radial-gradient(circle at center, rgba(245,158,11,0.2), transparent 70%);"></div>
+                <div class="playground-preview-emoji">🍜</div>
+                <span class="playground-label">Crafting Game</span>
+              </div>
+              <div class="playground-body">
+                <div class="playground-title">Nusantara Culinary Alchemist</div>
+                <div class="playground-desc">
+                  A web-based culinary crafting game that celebrates the rich flavors of Nusantara.
+                  Combine ingredients, discover traditional recipes, and unlock the secrets of
+                  Indonesian cuisine in this interactive alchemy experience.
+                </div>
+                <div class="playground-tech">
+                  <span class="playground-tech-tag">Next.js</span>
+                  <span class="playground-tech-tag">React</span>
+                  <span class="playground-tech-tag">TypeScript</span>
+                  <span class="playground-tech-tag">Vercel</span>
+                </div>
+                <a href="https://nusantara-alchemist.vercel.app/" target="_blank" rel="noopener"
+                   class="playground-link" id="project-nusantara-link">
+                  Play Now
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"/>
+                    <polyline points="7 7 17 7 17 17"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2: Coming Soon placeholder -->
+            <div class="playground-card">
+              <div class="playground-preview">
+                <div class="playground-preview-glow"></div>
+                <div class="playground-preview-emoji">🔮</div>
+                <span class="playground-label">Coming Soon</span>
+              </div>
+              <div class="playground-body">
+                <div class="playground-title">Project Unlocked Soon</div>
+                <div class="playground-desc">
+                  The next experiment is being architected. Built on the same philosophy —
+                  systems that think, adapt, and surprise. Stay tuned.
+                </div>
+                <div class="playground-tech">
+                  <span class="playground-tech-tag">In Development</span>
+                  <span class="playground-tech-tag">LLM</span>
+                  <span class="playground-tech-tag">Vercel</span>
+                </div>
+                <a href="https://vercel.com/865tirthas-projects" target="_blank" rel="noopener"
+                   class="playground-link" id="project-soon-link">
+                  View All Projects
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"/>
+                    <polyline points="7 7 17 7 17 17"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </div><!-- /carousel -->
+        </div><!-- /carousel-wrap -->
+
+        <!-- Carousel Controls -->
+        <div class="carousel-controls reveal">
+          <button class="carousel-btn" id="carousel-prev" aria-label="Previous project">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <div class="carousel-dots" id="carousel-dots"></div>
+          <button class="carousel-btn" id="carousel-next" aria-label="Next project">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ══════════════════════════════════════════════════ -->
+    <!--  CONTACT                                          -->
+    <!-- ══════════════════════════════════════════════════ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="section-label reveal">Get In Touch</p>
+        <h2 id="contact-title" class="section-title reveal reveal-delay-1">Let's Build<br />Something Real</h2>
+
+        <div class="contact-grid">
+
+          <!-- Left: Links -->
+          <div class="reveal reveal-delay-1">
+            <p class="contact-text">
+              <p style="font-size:1rem; color:var(--gray-400); line-height:1.8; margin-bottom:32px;">
+                Whether you're looking for a system architect, an LLM integration specialist,
+                or a collaborator on your next Web3 project — I'm ready to execute with precision.
+                Reach out through any channel below.
+              </p>
+            </p>
+
+            <div class="contact-links">
+              <a href="https://github.com/Hessong888" target="_blank" rel="noopener"
+                 class="contact-link" id="contact-github">
+                <div class="contact-link-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                  </svg>
+                </div>
+                <div class="contact-link-info">
+                  <div class="contact-link-label">GitHub</div>
+                  <div class="contact-link-value">github.com/Hessong888</div>
+                </div>
+                <div class="contact-arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"/>
+                    <polyline points="7 7 17 7 17 17"/>
+                  </svg>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/mahesa-permana/" target="_blank" rel="noopener"
+                 class="contact-link" id="contact-linkedin">
+                <div class="contact-link-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </div>
+                <div class="contact-link-info">
+                  <div class="contact-link-label">LinkedIn</div>
+                  <div class="contact-link-value">linkedin.com/in/mahesa-permana</div>
+                </div>
+                <div class="contact-arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"/>
+                    <polyline points="7 7 17 7 17 17"/>
+                  </svg>
+                </div>
+              </a>
+
+              <a href="https://vercel.com/865tirthas-projects" target="_blank" rel="noopener"
+                 class="contact-link" id="contact-vercel">
+                <div class="contact-link-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 22.525H0l12-21.05 12 21.05z"/>
+                  </svg>
+                </div>
+                <div class="contact-link-info">
+                  <div class="contact-link-label">Vercel Deployments</div>
+                  <div class="contact-link-value">vercel.com/865tirthas-projects</div>
+                </div>
+                <div class="contact-arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"/>
+                    <polyline points="7 7 17 7 17 17"/>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: CTA Card -->
+          <div class="reveal reveal-delay-2">
+            <div class="contact-card">
+              <img src="./assets/rose.svg" alt="Mechanical Rose" class="contact-rose" />
+              <div class="contact-card-title">Open for<br />Opportunities</div>
+              <p class="contact-card-desc">
+                Freelance contracts, full-time positions, open-source collaborations,
+                or just a technical conversation over coffee ☕. If you're building
+                something that matters, let's talk.
+              </p>
+              <a href="https://www.linkedin.com/in/mahesa-permana/" target="_blank" rel="noopener"
+                 class="btn-primary" id="contact-cta-btn"
+                 style="display:inline-flex; justify-content:center;">
+                Connect on LinkedIn
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-logo">Mahesa<span style="color:var(--gold)">.</span></div>
+    <div class="footer-copy">
+      &copy; 2024 Mahesa Permana · Crafted with precision &amp; 🌹
+    </div>
+    <img src="./assets/rose.svg" alt="Rose" class="footer-rose" aria-hidden="true" />
+  </footer>
+
+  <!-- ── SCRIPTS ────────────────────────────────────────── -->
+  <script src="./js/bundle.js"></script>
+
+</body>
+</html>
