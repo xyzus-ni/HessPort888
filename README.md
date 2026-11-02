@@ -8,18 +8,18 @@
   <meta name="author" content="Mahesa Tirtha Agung Permana" />
   <meta name="theme-color" content="#0a0a0f" />
 
-  <meta property="og:title" content="Mahesa Tirtha Agung Permana — Mechatronics & IoT Engineer" />
+  <meta property="og:title" content="Mahesa Tirtha Agung Permana | Mechatronics & IoT Engineer" />
   <meta property="og:description" content="Mechatronics & IoT Engineer building end-to-end smart systems (sensor → cloud → dashboard), with a practical focus on robotics and automation." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.xyzus.my.id/" />
   <meta property="og:image" content="https://www.xyzus.my.id/assets/hero_bg.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mahesa Tirtha Agung Permana — Portfolio" />
+  <meta name="twitter:title" content="Mahesa Tirtha Agung Permana | Portfolio" />
   <meta name="twitter:description" content="Mechatronics & IoT Engineer building end-to-end smart systems across instrumentation, cloud, and dashboard layers." />
   <meta name="twitter:image" content="https://www.xyzus.my.id/assets/hero_bg.png" />
 
-  <title>Mahesa Tirtha Agung Permana — Mechatronics & IoT Engineer</title>
+  <title>Mahesa Tirtha Agung Permana | Mechatronics & IoT Engineer</title>
   <link rel="canonical" href="https://www.xyzus.my.id/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -97,7 +97,7 @@
           </h1>
 
           <p class="hero-title typing-cursor">
-            <span id="hero-typing">Mechatronics Engineer</span>
+            <span id="hero-typing">Mechatronics &amp; IoT Engineer</span>
           </p>
 
           <p class="hero-description">
@@ -229,7 +229,7 @@
                   <svg class="about-info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
                   </svg>
-                  Open to Remote & On-site
+                  Open to Remote &amp; On-site
                 </div>
               </div>
 
@@ -264,7 +264,7 @@
     <section class="section github" id="github" aria-labelledby="github-title">
       <div class="container">
         <p class="section-label reveal">Code Repository</p>
-        <h2 id="github-title" class="section-title reveal reveal-delay-1">Open Source<br />& Projects</h2>
+        <h2 id="github-title" class="section-title reveal reveal-delay-1">Open Source<br />&amp; Projects</h2>
         <p class="section-subtitle reveal reveal-delay-2">
           Live-synced from GitHub. Each project reflects a piece of the larger vision — connected hardware,
           automation logic, and software experiments turned into practical tools.
@@ -276,7 +276,7 @@
             <div class="github-profile-name" id="github-name">Mahesa Tirtha Agung Permana</div>
             <div class="github-profile-handle" id="github-handle">@Hessong888</div>
             <div class="github-profile-bio" id="github-bio">
-              Mechatronics & IoT Engineer · Indonesia
+              Mechatronics &amp; IoT Engineer · Indonesia
             </div>
             <div style="display:flex; gap:24px; margin-top:12px;">
               <span style="font-family:var(--font-mono);font-size:0.78rem;color:var(--gray-400);">
@@ -314,7 +314,7 @@
     <section class="section experience" id="experience" aria-labelledby="experience-title">
       <div class="container">
         <p class="section-label reveal">Field Experience</p>
-        <h2 id="experience-title" class="section-title reveal reveal-delay-1">Career Path<br />& Internships</h2>
+        <h2 id="experience-title" class="section-title reveal reveal-delay-1">Career Path<br />&amp; Internships</h2>
         <p class="section-subtitle reveal reveal-delay-2">
           A practical journey through production, procurement, and technical support — each role shaped by
           hands-on learning in real industrial settings.
