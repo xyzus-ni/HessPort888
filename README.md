@@ -3,46 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mahesa Tirtha Agung Permana — Mechatronics & IoT Engineer building end-to-end smart systems from sensor to cloud to dashboard, with a hands-on focus on instrumentation, robotics, and automation." />
+  <meta name="description" content="Mahesa Tirtha Agung Permana — Mechatronics & IoT Engineer building end-to-end smart systems from sensor to cloud to dashboard." />
   <meta name="keywords" content="Mahesa Tirtha Agung Permana, Hessong888, Mechatronics, IoT Engineer, Robotics, Automation, Sensor to Cloud, Portfolio" />
   <meta name="author" content="Mahesa Tirtha Agung Permana" />
   <meta name="theme-color" content="#0a0a0f" />
+
   <meta property="og:title" content="Mahesa Tirtha Agung Permana — Mechatronics & IoT Engineer" />
-  <meta property="og:description" content="Mechatronics & IoT Engineer building end-to-end smart systems (sensor → cloud → dashboard), with a practical focus on robotics, automation, and connected engineering." />
+  <meta property="og:description" content="Mechatronics & IoT Engineer building end-to-end smart systems (sensor → cloud → dashboard), with a practical focus on robotics and automation." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.xyzus.my.id/" />
   <meta property="og:image" content="https://www.xyzus.my.id/assets/hero_bg.png" />
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:title" content="Mahesa Tirtha Agung Permana — Portfolio" />
-  <meta property="twitter:description" content="Mechatronics & IoT Engineer building end-to-end smart systems across hardware, cloud, and dashboard layers." />
-  <meta property="twitter:image" content="https://www.xyzus.my.id/assets/hero_bg.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mahesa Tirtha Agung Permana — Portfolio" />
+  <meta name="twitter:description" content="Mechatronics & IoT Engineer building end-to-end smart systems across instrumentation, cloud, and dashboard layers." />
+  <meta name="twitter:image" content="https://www.xyzus.my.id/assets/hero_bg.png" />
 
   <title>Mahesa Tirtha Agung Permana — Mechatronics & IoT Engineer</title>
   <link rel="canonical" href="https://www.xyzus.my.id/" />
 
-  <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="./css/main.css" />
   <link rel="stylesheet" href="./css/animations.css" />
-
-  <!-- Favicon (SVG rose) -->
   <link rel="icon" type="image/svg+xml" href="./assets/rose.svg" />
 </head>
 
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <!-- ── LOADING SCREEN ─────────────────────────────────── -->
   <div id="loader" class="loader">
     <img src="./assets/rose.svg" alt="Loading" class="loader-rose" />
     <div class="loader-bar"><div class="loader-bar-fill"></div></div>
     <span class="loader-text">Initializing System...</span>
   </div>
 
-  <!-- ── CUSTOM CURSOR ──────────────────────────────────── -->
   <div class="cursor" id="cursor-dot-wrap">
     <div id="cursor-dot" class="cursor-dot"></div>
   </div>
@@ -50,21 +46,18 @@
     <div id="cursor-ring" class="cursor-ring"></div>
   </div>
 
-  <!-- ── MOBILE NAV ────────────────────────────────────���── -->
   <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
   <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
     <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close menu">✕</button>
     <a href="#about">About</a>
     <a href="#github">Repositories</a>
     <a href="#experience">Experience</a>
-    <a href="#blog">Blog</a>
     <a href="#playground">Playground</a>
     <a href="#contact">Contact</a>
     <a href="https://github.com/Hessong888" target="_blank" rel="noopener">GitHub ↗</a>
     <a href="https://www.linkedin.com/in/mahesa-tirtha-agung-permana" target="_blank" rel="noopener">LinkedIn ↗</a>
   </nav>
 
-  <!-- ── NAVIGATION ─────────────────────────────────────── -->
   <header class="nav" role="banner">
     <a href="#home" class="nav-logo" aria-label="Home">
       <img src="./assets/rose.svg" alt="Rose logo" />
@@ -75,7 +68,6 @@
       <a href="#about">About</a>
       <a href="#github">Repositories</a>
       <a href="#experience">Experience</a>
-      <a href="#blog">Blog</a>
       <a href="#playground">Playground</a>
       <a href="#contact" class="nav-cta">Contact Me</a>
     </nav>
@@ -88,16 +80,11 @@
   </header>
 
   <main id="main-content">
-
-    <!-- ══════════════════════════════════════════════════ -->
-    <!--  HERO                                             -->
-    <!-- ══════════════════════════════════════════════════ -->
     <section class="hero" id="home" aria-label="Hero section">
       <div class="hero-bg" role="presentation"></div>
       <div id="hero-particles" class="hero-particles" aria-hidden="true"></div>
 
       <div class="hero-content">
-        <!-- Text -->
         <div class="hero-text">
           <div class="hero-badge">
             <div class="hero-badge-dot"></div>
@@ -114,10 +101,10 @@
           </p>
 
           <p class="hero-description">
-            I build connected systems from <span style="color:var(--gold-soft)">sensor</span> to
+            I build end-to-end systems from <span style="color:var(--gold-soft)">sensor</span> to
             <span style="color:var(--purple-glow)">cloud</span> to
-            <span style="color:var(--gold-soft)">dashboard</span> — with a practical focus on
-            robotics, automation, instrumentation, and smart technology solutions.
+            <span style="color:var(--gold-soft)">dashboard</span> — focused on robotics,
+            automation, instrumentation, and practical smart systems.
           </p>
 
           <div class="hero-actions">
@@ -153,7 +140,6 @@
           </div>
         </div>
 
-        <!-- Visual -->
         <div class="hero-visual" aria-hidden="true">
           <div class="hero-rose-wrap">
             <div class="hero-rose-ring hero-rose-ring-1"></div>
@@ -165,7 +151,6 @@
         </div>
       </div>
 
-      <!-- Scroll indicator -->
       <div class="hero-scroll" aria-hidden="true">
         <span class="scroll-text">Scroll</span>
         <div class="scroll-line"></div>
@@ -174,13 +159,9 @@
 
     <div class="divider"></div>
 
-    <!-- ══════════════════════════════════════════════════ -->
-    <!--  ABOUT                                            -->
-    <!-- ══════════════════════════════════════════════════ -->
     <section class="section about" id="about" aria-labelledby="about-title">
       <div class="container">
         <div class="about-grid">
-
           <div class="reveal">
             <p class="section-label">Who I Am</p>
             <h2 id="about-title" class="section-title">Building Smart Systems<br />From the Ground Up</h2>
@@ -191,13 +172,13 @@
                 devices, cloud services, and dashboards into practical, usable solutions.
               </p>
               <p>
-                I'm currently studying <span>D4 Mechatronics, Robotics & Automation Engineering</span>
-                at Politeknik Industri ATMI, and I'm open to <span>paid freelance work</span> on projects
-                where hardware, software, and real-world automation intersect.
+                I am currently studying <span>D4 Mechatronics, Robotics & Automation Engineering</span>
+                at Politeknik Industri ATMI, and I am open to <span>paid freelance work</span> on projects
+                where hardware, software, and real-world automation meet.
               </p>
               <p>
-                My approach focuses on translating physical signals into useful digital workflows —
-                from instrumentation and connected devices to monitoring, control, and automation logic.
+                My focus is on building connected systems from the physical layer to the digital layer —
+                from instrumentation and smart devices to monitoring, control, and automation logic.
               </p>
             </div>
 
@@ -274,23 +255,19 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
     <div class="divider"></div>
 
-    <!-- ══════════════════════════════════════════════════ -->
-    <!--  GITHUB REPOSITORIES                              -->
-    <!-- ══════════════════════════════════════════════════ -->
     <section class="section github" id="github" aria-labelledby="github-title">
       <div class="container">
         <p class="section-label reveal">Code Repository</p>
         <h2 id="github-title" class="section-title reveal reveal-delay-1">Open Source<br />& Projects</h2>
         <p class="section-subtitle reveal reveal-delay-2">
-          Live-synced from GitHub. Each project reflects a piece of the larger system — connected hardware,
-          automation logic, and software experiments that turn ideas into practical tools.
+          Live-synced from GitHub. Each project reflects a piece of the larger vision — connected hardware,
+          automation logic, and software experiments turned into practical tools.
         </p>
 
         <div class="github-profile-banner reveal">
@@ -334,15 +311,12 @@
 
     <div class="divider"></div>
 
-    <!-- ══════════════════════════════════════════════════ -->
-    <!--  EXPERIENCE TIMELINE                              -->
-    <!-- ══════════════════════════════════════════════════ -->
     <section class="section experience" id="experience" aria-labelledby="experience-title">
       <div class="container">
         <p class="section-label reveal">Field Experience</p>
         <h2 id="experience-title" class="section-title reveal reveal-delay-1">Career Path<br />& Internships</h2>
         <p class="section-subtitle reveal reveal-delay-2">
-          A practical journey through production, procurement, and technical support — each role informed by
+          A practical journey through production, procurement, and technical support — each role shaped by
           hands-on learning in real industrial settings.
         </p>
 
@@ -379,8 +353,8 @@
               <div class="timeline-company">PT. SGMW Motor Indonesia</div>
               <p class="timeline-desc">
                 Managed procurement and purchasing operations within an automotive manufacturing environment.
-                Coordinated with suppliers, tracked purchase orders, maintained inventory accuracy, and supported
-                timely component delivery for production continuity.
+                Coordinated with suppliers, tracked purchase orders, maintained inventory accuracy, and ensured
+                timely delivery of components to support production line continuity.
               </p>
               <div class="timeline-tags">
                 <span class="timeline-tag">Purchasing</span>
@@ -401,8 +375,8 @@
               </div>
               <div class="timeline-company">PT. Trimitra Chitrahasta</div>
               <p class="timeline-desc">
-                Provided technical infrastructure support, networking maintenance, and hardware troubleshooting to
-                ensure operational continuity within the organization.
+                Provided technical infrastructure support, networking maintenance, and hardware troubleshooting to ensure
+                operational continuity within the organization.
               </p>
               <div class="timeline-tags">
                 <span class="timeline-tag">IT Infrastructure</span>
@@ -411,7 +385,6 @@
               </div>
             </div>
           </div>
-
         </div>
 
         <div style="margin-top: 72px;">
@@ -447,30 +420,6 @@
 
     <div class="divider"></div>
 
-    <!-- ══════════════════════════════════════════════════ -->
-    <!--  BLOG SECTION                                     -->
-    <!-- ══════════════════════════════════════════════════ -->
-    <section class="section latest-writing" id="blog" aria-labelledby="blog-title">
-      <div class="container">
-        <p class="section-label reveal">Latest Writing</p>
-        <h2 id="blog-title" class="section-title reveal reveal-delay-1">Notes from the Lab</h2>
-        <p class="section-subtitle reveal reveal-delay-2">
-          Short technical notes, practical guides, and experiments across IoT, automation, and connected systems.
-        </p>
-
-        <div class="latest-writing-grid reveal" id="latest-writing-grid"></div>
-
-        <div class="text-center reveal" style="margin-top:36px;">
-          <a href="./blog/" class="btn-secondary">Read All Posts</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ══════════════════════════════════════════════════ -->
-    <!--  INTERACTIVE PLAYGROUND (VERCEL PROJECTS)         -->
-    <!-- ══════════════════════════════════════════════════ -->
     <section class="section playground" id="playground" aria-labelledby="playground-title">
       <div class="container">
         <p class="section-label reveal">Interactive Playground</p>
@@ -556,9 +505,6 @@
 
     <div class="divider"></div>
 
-    <!-- ══════════════════════════════════════════════════ -->
-    <!--  CONTACT                                          -->
-    <!-- ══════════════════════════════════════════════════ -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <p class="section-label reveal">Get In Touch</p>
@@ -634,7 +580,7 @@
               <img src="./assets/rose.svg" alt="Mechanical Rose" class="contact-rose" />
               <div class="contact-card-title">Open for<br />Opportunities</div>
               <p class="contact-card-desc">
-                Freelance contracts, project collaboration, open-source experimentation, or just a technical conversation.
+                Freelance contracts, project collaboration, open-source experimentation, or a technical conversation.
                 If you're building something real, let's talk.
               </p>
               <a href="https://www.linkedin.com/in/mahesa-tirtha-agung-permana" target="_blank" rel="noopener" class="btn-primary" id="contact-cta-btn" style="display:inline-flex; justify-content:center;">
@@ -648,7 +594,6 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer" role="contentinfo">
@@ -659,7 +604,21 @@
     <img src="./assets/rose.svg" alt="Rose" class="footer-rose" aria-hidden="true" />
   </footer>
 
-  <script type="module" src="./js/config.js"></script>
+  <script type="module">
+    import { PORTFOLIO_CONFIG } from './js/config.js';
+
+    const footerYear = document.getElementById('footer-year');
+    if (footerYear) {
+      footerYear.textContent = new Date().getFullYear() || '2026';
+    }
+
+    document.querySelectorAll('[data-social-link]').forEach((el) => {
+      const key = el.dataset.socialLink;
+      if (PORTFOLIO_CONFIG.socialLinks[key]) {
+        el.href = PORTFOLIO_CONFIG.socialLinks[key];
+      }
+    });
+  </script>
   <script type="module" src="./js/main.js"></script>
 </body>
 </html>

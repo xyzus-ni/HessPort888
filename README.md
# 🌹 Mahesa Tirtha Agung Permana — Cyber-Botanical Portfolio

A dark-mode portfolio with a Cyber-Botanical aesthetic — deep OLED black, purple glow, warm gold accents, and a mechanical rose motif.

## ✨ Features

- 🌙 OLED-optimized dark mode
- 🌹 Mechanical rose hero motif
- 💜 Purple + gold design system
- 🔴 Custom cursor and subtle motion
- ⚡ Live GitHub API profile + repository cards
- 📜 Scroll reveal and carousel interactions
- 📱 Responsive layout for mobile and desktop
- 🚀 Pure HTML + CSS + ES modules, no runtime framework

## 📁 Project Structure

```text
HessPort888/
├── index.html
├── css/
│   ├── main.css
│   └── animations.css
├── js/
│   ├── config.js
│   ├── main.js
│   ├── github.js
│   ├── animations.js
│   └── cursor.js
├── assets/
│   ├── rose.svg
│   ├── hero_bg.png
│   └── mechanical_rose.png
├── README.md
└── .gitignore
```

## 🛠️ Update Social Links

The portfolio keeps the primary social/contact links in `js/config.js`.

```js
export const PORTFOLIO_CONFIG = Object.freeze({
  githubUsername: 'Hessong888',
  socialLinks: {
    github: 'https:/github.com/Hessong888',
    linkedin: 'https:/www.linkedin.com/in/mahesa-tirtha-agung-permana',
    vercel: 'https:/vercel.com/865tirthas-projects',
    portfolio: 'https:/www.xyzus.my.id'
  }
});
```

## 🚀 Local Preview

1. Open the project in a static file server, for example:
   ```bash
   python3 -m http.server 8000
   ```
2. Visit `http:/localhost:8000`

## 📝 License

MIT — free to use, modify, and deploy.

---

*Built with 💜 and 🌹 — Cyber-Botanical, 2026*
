@@ -1,0 +1,189 @@
+import { PORTFOLIO_CONFIG } from './config.js';
+
+// ============================================================
+//  CYBER-BOTANICAL PORTFOLIO — GitHub API Module
+//  github.js — Fetches and renders GitHub profile + repos
+// ============================================================
+
+const GITHUB_USERNAME = PORTFOLIO_CONFIG.githubUsername;
+const GITHUB_API = 'https://api.github.com';
+
+// Language color map
+const LANG_COLORS = {
+  JavaScript: '#f7df1e',
+  TypeScript: '#3178c6',
+  Python: '#3572A5',
+  'C++': '#f34b7d',
+  C: '#555555',
+  Rust: '#dea584',
+  Go: '#00ADD8',
+  HTML: '#e34c26',
+  CSS: '#563d7c',
+  Shell: '#89e051',
+  Solidity: '#AA6746',
+  Dockerfile: '#384d54',
+  default: '#7c3aed',
+};
+
+function getLangColor(lang) {
+  return LANG_COLORS[lang] || LANG_COLORS.default;
+}
+
+// ── FETCH PROFILE ────────────────────────────────────────────
+async function fetchGitHubProfile() {
+  try {
+    const res = await fetch(`${GITHUB_API}/users/${GITHUB_USERNAME}`);
+    if (!res.ok) throw new Error('Profile fetch failed');
+    return await res.json();
+  } catch (e) {
+    console.warn('GitHub profile fetch error:', e);
+    return null;
+  }
+}
+
+// ── FETCH REPOS ──────────────────────────────────────────────
+async function fetchGitHubRepos() {
+  try {
+    const res = await fetch(
+      `${GITHUB_API}/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=12`
+    );
+    if (!res.ok) throw new Error('Repos fetch failed');
+    return await res.json();
+  } catch (e) {
+    console.warn('GitHub repos fetch error:', e);
+    return [];
+  }
+}
+
+// ── RENDER PROFILE BANNER ────────────────────────────────────
+function renderProfileBanner(profile) {
+  const avatarEl = document.getElementById('github-avatar');
+  const nameEl = document.getElementById('github-name');
+  const handleEl = document.getElementById('github-handle');
+  const bioEl = document.getElementById('github-bio');
+  const followEl = document.getElementById('github-followers');
+  const followingEl = document.getElementById('github-following');
+  const reposEl = document.getElementById('github-public-repos');
+
+  if (!profile) return;
+
+  if (avatarEl && profile.avatar_url) {
+    const img = document.createElement('img');
+    img.src = profile.avatar_url;
+    img.alt = profile.login;
+    avatarEl.appendChild(img);
+  }
+
+  if (nameEl) nameEl.textContent = profile.name || profile.login;
+  if (handleEl) handleEl.textContent = `@${profile.login}`;
+  if (bioEl) bioEl.textContent = profile.bio || 'Mechatronics & IoT Engineer · Indonesia';
+
+  if (followEl) followEl.textContent = (profile.followers || 0).toLocaleString();
+  if (followingEl) followingEl.textContent = (profile.following || 0).toLocaleString();
+  if (reposEl) reposEl.textContent = (profile.public_repos || 0).toLocaleString();
+}
+
+// ── RENDER REPO CARD ─────────────────────────────────────────
+function renderRepoCard(repo) {
+  const langColor = getLangColor(repo.language);
+  const desc = repo.description || 'No description provided.';
+  const truncDesc = desc.length > 100 ? desc.slice(0, 97) + '...' : desc;
+
+  return `
+    <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer"
+       class="repo-card reveal" data-type="repo">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div class="repo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <span class="repo-name">${repo.name}</span>
+      </div>
+
+      <p class="repo-desc">${truncDesc}</p>
+
+      <div class="repo-footer">
+        <div class="repo-lang">
+          ${repo.language ? `<span class="lang-dot" style="background:${langColor}"></span>
+          <span>${repo.language}</span>` : '<span style="color:var(--gray-600)">—</span>'}
+        </div>
+        <div class="repo-stats">
+          <span class="repo-stat">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            ${repo.stargazers_count}
+          </span>
+          <span class="repo-stat">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/>
+              <circle cx="6" cy="18" r="3"/>
+              <path d="M6 9v3a3 3 0 0 0 3 3h6"/>
+              <line x1="18" y1="9" x2="18" y2="15"/>
+            </svg>
+            ${repo.forks_count}
+          </span>
+        </div>
+      </div>
+    </a>
+  `;
+}
+
+// ── RENDER EMPTY STATE ───────────────────────────────────────
+function renderEmptyState() {
+  return `
+    <div class="repos-empty reveal">
+      <div class="repos-empty-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+      <div class="repos-empty-title">Repositories Loading Soon™</div>
+      <div class="repos-empty-desc">
+        Projects are being architected in stealth mode.<br>
+        Star the profile to get notified when code drops. 🌹
+      </div>
+      <a href="${PORTFOLIO_CONFIG.socialLinks.github}"
+         target="_blank" rel="noopener noreferrer"
+         class="btn-secondary" style="display:inline-flex; margin-top:20px;">
+        Follow on GitHub
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="7" y1="17" x2="17" y2="7"/>
+          <polyline points="7 7 17 7 17 17"/>
+        </svg>
+      </a>
+    </div>
+  `;
+}
+
+// ── INIT GITHUB SECTION ──────────────────────────────────────
+async function initGitHub() {
+  const [profile, repos] = await Promise.all([
+    fetchGitHubProfile(),
+    fetchGitHubRepos(),
+  ]);
+
+  renderProfileBanner(profile);
+
+  const grid = document.getElementById('repo-grid');
+  if (!grid) return;
+
+  if (!repos || repos.length === 0) {
+    grid.innerHTML = renderEmptyState();
+  } else {
+    grid.innerHTML = repos.map(renderRepoCard).join('');
+  }
+
+  // Trigger reveal for new elements
+  if (window.observeReveal) {
+    grid.querySelectorAll('.reveal').forEach((el) => window.observeReveal(el));
+  }
+}
+
+export { initGitHub };

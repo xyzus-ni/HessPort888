@@ -1,7 +1,7 @@
 export const PORTFOLIO_CONFIG = Object.freeze({
   siteUrl: 'https://www.xyzus.my.id',
   githubUsername: 'Hessong888',
-  // TODO: update the GitHub username and all social URLs from one place if the profile changes.
+  // TODO: update the GitHub username and all social URLs from this single source when needed.
   socialLinks: {
     github: 'https://github.com/Hessong888',
     linkedin: 'https://www.linkedin.com/in/mahesa-tirtha-agung-permana',
